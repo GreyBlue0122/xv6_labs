@@ -1,0 +1,7 @@
+Q1：in usertrap () at kernel/trap.c:68
+Q2:  15; sys_open;
+Q3:  用户模式
+Q4:  指令：lw	       	a3,0(zero) # 0 <_entry-0x80000000>  
+	num 对应 a3 寄存器
+Q5: 因为该汇编语句使得num变量的存放地址被设置为了0，而内存中0位置为系统内核地址空间。scause值为0xd,代表了读页错误。
+Q6: init;pid = 1;
