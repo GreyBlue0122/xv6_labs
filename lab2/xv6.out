@@ -1,0 +1,11 @@
+
+xv6 kernel is booting
+
+hart 2 starting
+hart 1 starting
+init: starting sh
+$ secret 1NBV9XbH
+$ attack
+$ attack
+1NBV9XbH
+$ qemu-system-riscv64: terminating on signal 15 from pid 88298 (make)
