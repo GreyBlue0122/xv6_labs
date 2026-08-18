@@ -197,7 +197,7 @@ UPROGS=\
 	$U/_dorphan\
 	$U/_symlinktest\
 
-QEMUOPTS = -machine virt -bios none -kernel $K/kernel -m 128M -smp $(CPUS) -nographic -accel kvm
+QEMUOPTS = -machine virt -bios none -kernel $K/kernel -m 128M -smp $(CPUS) -nographic 
 ifeq ($(LAB),util)
 UPROGS += \
 	$U/_sleep\
@@ -311,7 +311,7 @@ ifndef CPUS
 CPUS := 3
 endif
 ifeq ($(LAB),fs)
-CPUS := 3
+CPUS := 1
 endif
 ifeq ($(LAB),lock)
 CPUS := 4

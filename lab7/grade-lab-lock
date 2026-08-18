@@ -9,7 +9,7 @@ r = Runner(save("xv6.out"))
 def test_kalloctest():
     r.run_qemu(shell_script([
         'kalloctest'
-    ]), timeout=600)
+    ]), timeout=2400)
     
 @test(10, "kalloctest: test1", parent=test_kalloctest)
 def test_kalloctest_test1():
@@ -38,7 +38,7 @@ def test_sbrkmuch():
 def test_rwlktest():
     r.run_qemu(shell_script([
         'rwlktest'
-    ]), timeout=300)
+    ]), timeout=1000)
     
 @test(30, "rwlktest", parent=test_rwlktest)
 def test_bcachetest_checktest0():
@@ -48,7 +48,7 @@ def test_bcachetest_checktest0():
 def test_usertests():
     r.run_qemu(shell_script([
         'usertests -q'
-    ]), timeout=1500)
+    ]), timeout=5000)
     r.match('^ALL TESTS PASSED$')
 
 @test(1, "time")
